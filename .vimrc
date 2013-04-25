@@ -1,4 +1,4 @@
- 
+
 set nocompatible " use vim defaults
 filetype off "required for vundle
 
@@ -29,7 +29,7 @@ set ai " set auto-indenting on for programming
  
 set showcmd " display incomplete commands
 set nobackup " do not keep a backup file
-set number " show line numbers
+set relativenumber " show relative line numbers
 set ruler " show the current row and column
  
 set hlsearch " highlight searches
@@ -49,7 +49,8 @@ set backspace=indent,eol,start " make that backspace key work the way it should
 nnoremap <leader><space> :noh<cr>
 "shortcut for :Ack
 nnoremap <leader>a :Ack 
-
+"easymotion word is ,
+let g:EasyMotion_mapping_w = ','
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <F8> :TagbarToggle<CR>
 
