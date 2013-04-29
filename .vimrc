@@ -44,7 +44,8 @@ set shiftwidth=4
 set tabstop=4 
 
 set backspace=indent,eol,start " make that backspace key work the way it should
-
+"Ctrlp show dotfiles
+let g:ctrlp_show_hidden = 1
 "Clear Search highlight
 nnoremap <leader><space> :noh<cr>
 "shortcut for :Ack
