@@ -4,7 +4,6 @@ filetype off "required for vundle
 
 set rtp+=~/.vim/bundle/vundle/ "required for vundle
 call vundle#rc() "required for vundle
-"Test to see how git works
 Bundle 'gmarik/vundle' 
 
 "Bundles here
@@ -44,6 +43,7 @@ set shiftwidth=4
 set tabstop=4 
 
 set backspace=indent,eol,start " make that backspace key work the way it should
+
 "Ctrlp show dotfiles
 let g:ctrlp_show_hidden = 1
 "Clear Search highlight
