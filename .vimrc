@@ -4,7 +4,7 @@ filetype off "required for vundle
 
 set rtp+=~/.vim/bundle/vundle/ "required for vundle
 call vundle#rc() "required for vundle
-
+"Test to see how git works
 Bundle 'gmarik/vundle' 
 
 "Bundles here
