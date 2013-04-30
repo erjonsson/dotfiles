@@ -4,6 +4,7 @@ filetype off "required for vundle
 
 set rtp+=~/.vim/bundle/vundle/ "required for vundle
 call vundle#rc() "required for vundle
+
 Bundle 'gmarik/vundle' 
 
 "Bundles here
@@ -22,6 +23,14 @@ Bundle  'tomasr/molokai'
 Bundle  'morhetz/gruvbox'
 Bundle  'vim-scripts/Wombat'
 
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
 
 set scrolloff=3 " keep 3 lines when scrolling
 set ai " set auto-indenting on for programming
@@ -43,7 +52,6 @@ set shiftwidth=4
 set tabstop=4 
 
 set backspace=indent,eol,start " make that backspace key work the way it should
-
 "Ctrlp show dotfiles
 let g:ctrlp_show_hidden = 1
 "Clear Search highlight
