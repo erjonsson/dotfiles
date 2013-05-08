@@ -58,8 +58,7 @@ let g:ctrlp_show_hidden = 1
 nnoremap <leader><space> :noh<cr>
 "shortcut for :Ack
 nnoremap <leader>a :Ack 
-"easymotion word is ,
-let g:EasyMotion_mapping_w = ','
+let g:EasyMotion_leader_key = '<Leader>'
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <F8> :TagbarToggle<CR>
 
