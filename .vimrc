@@ -8,12 +8,14 @@ call vundle#rc() "required for vundle
 Bundle 'gmarik/vundle' 
 
 "Bundles here
-Bundle  'Valloric/YouCompleteMe'
+"Bundle  'Valloric/YouCompleteMe'
 Bundle  'mileszs/ack.vim'
 Bundle  'kien/ctrlp.vim'
 Bundle  'scrooloose/syntastic'
 Bundle  'majutsushi/tagbar'
 Bundle  'Lokaltog/vim-easymotion'
+Bundle	'chazy/cscope_maps'
+Bundle	'scrooloose/nerdtree'
 "colorschemes
 Bundle  'wgibbs/vim-irblack'
 Bundle  'altercation/vim-colors-solarized'
@@ -23,14 +25,6 @@ Bundle  'tomasr/molokai'
 Bundle  'morhetz/gruvbox'
 Bundle  'vim-scripts/Wombat'
 
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
 
 set scrolloff=3 " keep 3 lines when scrolling
 set ai " set auto-indenting on for programming
@@ -50,8 +44,9 @@ set visualbell t_vb= " turn off error beep/flash
 set novisualbell " turn off visual bell
 set shiftwidth=4
 set tabstop=4 
-
+set expandtab
 set backspace=indent,eol,start " make that backspace key work the way it should
+
 "Ctrlp show dotfiles
 let g:ctrlp_show_hidden = 1
 "Clear Search highlight
@@ -61,6 +56,7 @@ nnoremap <leader>a :Ack
 let g:EasyMotion_leader_key = '<Leader>'
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <F8> :TagbarToggle<CR>
+map <F7> :NERDTreeToggle<CR>
 
 let g:ycm_global_ycm_extra_conf = '~/.ycm_global_ycm_extra_conf.py'
 
@@ -68,5 +64,8 @@ set t_Co=256
 syntax on " turn syntax highlighting on by default
 filetype plugin indent on " load indent file for specific file type
 
-colorscheme hemisu
-set background=dark
+"colorscheme hemisu
+"set background=dark
+"colorscheme hemisu
+"let g:solarized_termcolors=256
+colorscheme jellybeans
