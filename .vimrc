@@ -16,6 +16,9 @@ Bundle  'majutsushi/tagbar'
 Bundle  'Lokaltog/vim-easymotion'
 Bundle	'chazy/cscope_maps'
 Bundle	'scrooloose/nerdtree'
+Bundle	'tpope/vim-rails'
+Bundle	'thoughtbot/vim-rspec'
+Bundle	'vim-ruby/vim-ruby'
 "colorschemes
 Bundle  'wgibbs/vim-irblack'
 Bundle  'altercation/vim-colors-solarized'
@@ -24,10 +27,11 @@ Bundle  'nanotech/jellybeans.vim'
 Bundle  'tomasr/molokai'
 Bundle  'morhetz/gruvbox'
 Bundle  'vim-scripts/Wombat'
+Bundle  'dhruvasagar/vim-railscasts-theme'
 
 
 set scrolloff=3 " keep 3 lines when scrolling
-set ai " set auto-indenting on for programming
+"set ai " set auto-indenting on for programming
  
 set showcmd " display incomplete commands
 set nobackup " do not keep a backup file
@@ -42,8 +46,8 @@ set smartcase " no ignorecase if Uppercase char present
  
 set visualbell t_vb= " turn off error beep/flash
 set novisualbell " turn off visual bell
-set shiftwidth=4
-set tabstop=4 
+set shiftwidth=2
+set tabstop=2 
 set expandtab
 set backspace=indent,eol,start " make that backspace key work the way it should
 
@@ -54,15 +58,20 @@ nnoremap <leader><space> :noh<cr>
 "shortcut for :Ack
 nnoremap <leader>a :Ack 
 let g:EasyMotion_leader_key = '<Leader>'
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 map <F8> :TagbarToggle<CR>
 map <F7> :NERDTreeToggle<CR>
 
-let g:ycm_global_ycm_extra_conf = '~/.ycm_global_ycm_extra_conf.py'
+" RSpec.vim mappings
+ map <Leader>t :call RunCurrentSpecFile()<CR>
+ map <Leader>s :call RunNearestSpec()<CR>
+ map <Leader>l :call RunLastSpec()<CR>
+ map <Leader>a :call RunAllSpecs()<CR>
 
 set t_Co=256
 syntax on " turn syntax highlighting on by default
 filetype plugin indent on " load indent file for specific file type
+"Fix html indentation problem in vim 7.4
+let g:html_indent_inctags = "html,body,head,tbody"
 
 "colorscheme hemisu
 "set background=dark
